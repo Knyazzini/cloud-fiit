@@ -1,0 +1,13 @@
+
+version: "3.4"
+
+services:
+  backendapp:
+    container_name: "backend-container"
+    image: "cr.yandex/crp6j2itrajd4no3mrj3/backend:v1"
+    environment:
+      - VERSION=v1
+      - NAME=replica
+    ports:
+      - "8080:8080"
+    restart: always
